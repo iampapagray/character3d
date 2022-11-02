@@ -7,7 +7,7 @@ import * as dat from "dat.gui";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { CameraHelper } from "three";
 import sq from "./textures/squares.png";
-import soldier from "models/Soldier.glb";
+import soldier from "./models/Soldier.glb";
 
 // debug gui
 const gui = new dat.GUI();
