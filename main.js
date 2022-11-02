@@ -7,6 +7,7 @@ import * as dat from "dat.gui";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { CameraHelper } from "three";
 import sq from "./textures/squares.png";
+import soldier from "models/Soldier.glb";
 
 // debug gui
 const gui = new dat.GUI();
@@ -74,13 +75,12 @@ generateFloor();
 // MODEL WITH ANIMATIONS
 var characterControls
 const gLoader = new GLTFLoader();
-gLoader.load("models/Soldier.glb", function (gltf) {
+gLoader.load(soldier, function (gltf) {
   const model = gltf.scene;
   scene.add(model);
   model.traverse(function (object) {
     if (object.isMesh) object.castShadow = true;
   });
-
 
   const gltfAnimations = gltf.animations;
   const mixer = new THREE.AnimationMixer(model);
