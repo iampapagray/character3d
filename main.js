@@ -6,6 +6,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { CameraHelper } from "three";
+import sq from "./textures/squares.png";
 
 // debug gui
 const gui = new dat.GUI();
@@ -189,13 +190,13 @@ function wrapAndRepeatTexture(map) {
 function generateFloor() {
   // TEXTURES
   const textureLoader = new THREE.TextureLoader();
-  const placeholder = textureLoader.load("./textures/squares.png");
-  const sandBaseColor = textureLoader.load("./textures/Sand 002_COLOR.jpg");
-  const sandNormalMap = textureLoader.load("./textures/Sand 002_NRM.jpg");
-  const sandHeightMap = textureLoader.load("./textures/Sand 002_DISP.jpg");
-  const sandAmbientOcclusion = textureLoader.load(
-    "./textures/Sand 002_OCC.jpg"
-  );
+  const placeholder = textureLoader.load(sq);
+  // const sandBaseColor = textureLoader.load("./textures/Sand 002_COLOR.jpg");
+  // const sandNormalMap = textureLoader.load("./textures/Sand 002_NRM.jpg");
+  // const sandHeightMap = textureLoader.load("./textures/Sand 002_DISP.jpg");
+  // const sandAmbientOcclusion = textureLoader.load(
+    // "./textures/Sand 002_OCC.jpg"
+  // );
 
   const WIDTH = 80;
   const LENGTH = 80;
